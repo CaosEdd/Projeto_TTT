@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_TTT.Domain.Entities.ObjectValues
 {
-    internal class Cep
+    public class Cep
     {
         public string CepValor { get; set; }
     }

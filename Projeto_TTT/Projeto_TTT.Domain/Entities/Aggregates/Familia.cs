@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_TTT.Domain.Entities.Aggregates
 {
-    internal class Familia
+    public class Familia
     {
         public int FamiliaId { get; set; }
         public string NomeFamilia { get; set; }

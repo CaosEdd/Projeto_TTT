@@ -1,7 +1,18 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Projeto_TTT.Data.Contexts;
+using Projeto_TTT.Domain.Entities.AggregateRoots;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var connection = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<SupabaseContext>(options =>options.UseNpgsql(connection));
+
+builder.Services.AddIdentity<Usuario, IdentityRole>().AddEntityFrameworkStores<SupabaseContext>();
 
 var app = builder.Build();
 
@@ -17,7 +28,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

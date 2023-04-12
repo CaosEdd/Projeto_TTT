@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_TTT.Domain.Entities.ObjectValues.Enumarators
 {
-    internal enum Preferencia
+    public enum Preferencia
     {
         Doce,
         Salgado,
