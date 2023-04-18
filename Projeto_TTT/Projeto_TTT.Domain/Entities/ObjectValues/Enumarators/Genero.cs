@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Projeto_TTT.Domain.Entities.ObjectValues.Enumarators
 {
-    internal enum Genero
+    public enum Genero
     {
-        Masculino, 
+        Masculino = 1, 
         Feminino,
         Nao_Binario,
         Nao_Definido

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projeto_TTT.Domain.Entities.ObjectValues.Enumarators
 {
-    internal enum Orixa
+    public enum Orixa
     {
         Oxossi,
         Ogum,
